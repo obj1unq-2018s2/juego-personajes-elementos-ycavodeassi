@@ -1,6 +1,6 @@
 # Tests que hay que realizar
 
-Se pide armar estos cuatro tests
+Se pide armar estos tres tests
 
 1. `luisa` tiene como personaje activo a `mario`. A `luisa` le aparece primero `aurora`, y después el `castillo`. <br> Después de esto, verificar que: 
 	- el valor total recolectado por `mario` es 45, 
@@ -24,8 +24,6 @@ Verificar que:
 	- `aurora` está viva, 
 	- la defensa del `castillo` es 146, y que 
 	- la `ballesta` está cargada, y le quedan 8 flechas.
-
-1. A `luisa` le aparece `aurora`, sin que se le haya cargado un personaje activo. Verificar que ocurre un error.
 
 <br> 
 Para los primeros dos tests, dibujar el diagrama de objetos como queda al final, después de ejecutar todo el test.
