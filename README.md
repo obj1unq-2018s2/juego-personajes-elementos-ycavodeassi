@@ -36,7 +36,7 @@ Veamos cómo debe reaccionar cada elemento al recibir un ataque:
 - `aurora` muere si la potencia del ataque es 10 o más; si no, no le pasa nada. 
 - a `tipa` no le pasa nada.
 
-A su vez, respecto de las armas tenemos estas definiciones respecto de la potencia y el uso, y cuándo se consideran cargadas.
+A su vez, respecto de las armas tenemos estas definiciones respecto de la potencia, el uso, y cuándo se consideran cargadas.
 - La `ballesta` nace con 10 flechas. Cada vez que se usa, pierde una flecha. Está cargada si tiene flechas. Su potencia es 4.
 - La `jabalina` nace cargada. Se puede usar solamente una vez, o sea, con el primer uso deja de estar cargada. Su potencia es 30.
 
@@ -67,8 +67,8 @@ La acción que falta en el método `encontrar(elemento)` es necesaria para poder
 
 En cada momento del juego, `luisa` está manejando uno de sus personajes, es el _personaje activo_. En este modelo reducido, el personaje activo de `luisa` puede ser o bien `floki` o bien `mario`. 
 
-El objeto `luisa` debe entender el mensaje `aparece(unElemento)`. 
-Cuando le llega este mensaje, `luisa` le dice a su personaje activo que se encuentre al elemento. Si no tiene ningún personaje activo, debe lanzar un error. 
+El objeto `luisa` debe entender el mensaje `aparece(elemento)`. 
+Cuando le llega este mensaje, `luisa` le dice a su personaje activo que encuentre al elemento. 
 Luisa no nace con ningún personaje activo, hay que asignarle uno.
 
 

@@ -663,7 +663,7 @@ function setDocumentScrollTop(ypos)
  <li> <code>aurora</code> muere si la potencia del ataque es 10 o m&aacute;s; si no, no le pasa nada.</li> 
  <li>a <code>tipa</code> no le pasa nada.</li> 
 </ul> 
-<p>A su vez, respecto de las armas tenemos estas definiciones respecto de la potencia y el uso, y cu&aacute;ndo se consideran cargadas.</p> 
+<p>A su vez, respecto de las armas tenemos estas definiciones respecto de la potencia, el uso, y cu&aacute;ndo se consideran cargadas.</p> 
 <ul> 
  <li>La <code>ballesta</code> nace con 10 flechas. Cada vez que se usa, pierde una flecha. Est&aacute; cargada si tiene flechas. Su potencia es 4.</li> 
  <li>La <code>jabalina</code> nace cargada. Se puede usar solamente una vez, o sea, con el primer uso deja de estar cargada. Su potencia es 30.</li> 
@@ -682,6 +682,6 @@ function setDocumentScrollTop(ypos)
 <br /> 
 <h2> <a id="luisa" class="anchor" href="#luisa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Luisa</h2> 
 <p>En cada momento del juego, <code>luisa</code> est&aacute; manejando uno de sus personajes, es el <em>personaje activo</em>. En este modelo reducido, el personaje activo de <code>luisa</code> puede ser o bien <code>floki</code> o bien <code>mario</code>.</p> 
-<p>El objeto <code>luisa</code> debe entender el mensaje <code>aparece(unElemento)</code>. Cuando le llega este mensaje, <code>luisa</code> le dice a su personaje activo que se encuentre al elemento. Si no tiene ning&uacute;n personaje activo, debe lanzar un error. Luisa no nace con ning&uacute;n personaje activo, hay que asignarle uno.</p>
+<p>El objeto <code>luisa</code> debe entender el mensaje <code>aparece(elemento)</code>. Cuando le llega este mensaje, <code>luisa</code> le dice a su personaje activo que encuentre al elemento. Luisa no nace con ning&uacute;n personaje activo, hay que asignarle uno.</p>
 </body>
 </html>
