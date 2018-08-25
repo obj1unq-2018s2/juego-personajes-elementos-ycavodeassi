@@ -1,0 +1,46 @@
+import jugadoresPersonajes.*
+import elementosArmas.*
+
+describe "tests del juego" {
+
+	test "test 1" {
+		luisa.asignarPersonajeActivo(mario)
+		luisa.aparece(aurora)
+		luisa.aparece(castillo)
+		
+		assert.equals(45, mario.valorRecolectado())
+		assert.that(mario.esFeliz())
+		assert.equals(170, castillo.nivelDeDefensa())
+	}
+	
+	test "test 2" {
+		floki.darArma(jabalina)
+		luisa.asignarPersonajeActivo(mario)	
+		luisa.aparece(tipa)
+		luisa.asignarPersonajeActivo(floki)
+		luisa.aparece(aurora)
+		luisa.aparece(castillo)
+		
+		assert.equals(16, mario.valorRecolectado())
+		assert.equals(9, tipa.altura())
+		assert.notThat(mario.esFeliz())
+		assert.notThat(aurora.estaViva())
+		assert.equals(150, castillo.nivelDeDefensa())
+		assert.notThat(jabalina.estaCargada())
+	}
+	
+	test "test 3" {
+		floki.darArma(ballesta)
+		luisa.asignarPersonajeActivo(floki)
+		luisa.aparece(aurora)
+		luisa.aparece(castillo)
+		
+		assert.equals(0, mario.valorRecolectado())
+		assert.that(aurora.estaViva())
+		assert.equals(146, castillo.nivelDeDefensa())
+
+		assert.that(ballesta.estaCargada())
+		assert.equals(8, ballesta.cantidadFlechas())
+	}
+	
+}

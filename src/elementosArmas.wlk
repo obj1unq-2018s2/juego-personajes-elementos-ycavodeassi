@@ -24,7 +24,7 @@ object aurora {
 }
 
 object tipa {
-	var altura
+	var altura = 8
 	
 	method altura() { return altura }
 	method recibirAtaque(potencia) { }	
@@ -39,6 +39,7 @@ object ballesta {
 	method estaCargada() { return cantidadFlechas > 0 }
 	method potencia() { return 4 }
 	method registrarUso() { cantidadFlechas -= 1 }
+	method cantidadFlechas() { return cantidadFlechas }
 }
 
 object jabalina {
