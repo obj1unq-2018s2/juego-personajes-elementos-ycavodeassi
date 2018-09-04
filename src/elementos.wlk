@@ -5,7 +5,7 @@
 
 object castillo {
 	const property altura = 20
-	var nivelDeDefensa = 150
+	var property nivelDeDefensa = 150
 	
 	method recibirAtaque(powerDamage) { nivelDeDefensa -= powerDamage }
 	method valorQueOtorga() = nivelDeDefensa / 5
@@ -21,7 +21,7 @@ object castillo {
 
 object aurora {
 	const property altura = 1
-	var estaViva = true
+	var property estaViva = true
 	
 	method recibirAtaque(potenciaDeAtaque) { 
 		if (potenciaDeAtaque >= 10) {

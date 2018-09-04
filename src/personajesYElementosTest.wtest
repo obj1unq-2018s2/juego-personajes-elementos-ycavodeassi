@@ -1,8 +1,16 @@
+import armas.*
+import elementos.*
+import jugadoresPersonajes.*
+
 describe "Pruebas de personajes:" {
 	
-	test "Floki" {
-		
-
+	test "Personajes de Floki" {
+		floki.arma(ballesta)
+		floki.encontrar(castillo)
+		assert.equals(146, castillo.nivelDeDefensa())
+		assert.that(ballesta.estaCargada())
 	}
+	
+	
 		
 }
