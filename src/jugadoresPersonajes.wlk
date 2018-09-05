@@ -9,10 +9,19 @@ import elementos.*
 //al elemento. 
 //Luisa no nace con ningún personaje activo, hay que asignarle uno.
 object luisa {
-	var property personajeActivo = noHayPersonaje
+	var personajeActivo = noHayPersonaje
 	
-	method encontrar(elemento) {}
-	method aparece(elemento) {}
+	method noHayPersonaje() = noHayPersonaje
+	method asignarPersonaje(unPersonaje) { personajeActivo = unPersonaje }
+	method aparece(elemento) { 
+		if (personajeActivo != self.noHayPersonaje()) {
+			personajeActivo.darArma(ballesta) //deberia preguntar que arma utilizar.
+			personajeActivo.encontrar(elemento)
+		}
+		else {
+			self.error("Por favor antes debe asignarle un **personaje** a Luisa!")
+		}
+	}
 }
 
 //En el método `encontrar(elemento)` de `floki` vemos que pasan dos cosas: 
@@ -69,6 +78,8 @@ object mario {
 	method esFeliz() {
 		return valorRecolectado >= 50 || ultimoElementoQueEncontro.altura() >= 10
 	}
+	method darArma(unArma) {}
+}
 
 object noHayPersonaje {
 	// no hace falta ponerle ningún método, es solamente para marcarle a Luisa que no tiene ningún personaje activo

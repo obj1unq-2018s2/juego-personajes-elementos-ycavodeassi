@@ -5,14 +5,15 @@ import jugadoresPersonajes.*
 describe "Pruebas de personajes:" {
 	
 	test  "Floki" {
-		floki.arma(ballesta)
+		floki.darArma(ballesta)
 		floki.encontrar(castillo)
 		assert.equals(146, castillo.nivelDeDefensa())
 		assert.that(ballesta.estaCargada())
 	}
 	
 	test "Mario"{
-		
+		mario.encontrar(tipa)
+		assert.notThat(mario.esFeliz())
 	}
 		
 }
