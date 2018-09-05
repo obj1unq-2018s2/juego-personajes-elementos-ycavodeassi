@@ -25,12 +25,16 @@ object luisa {
 // a `tipa` no le pasa nada.
 
 object floki {
-	var property arma = null
+	var arma // lanzamos un error ej. (no esta inicializada una var)
 	
+	method darArma(unArma) { arma = unArma } 
 	method encontrar(elemento) {
 	    if (arma.estaCargada()) {
 	        elemento.recibirAtaque(arma.potencia()) 
 	        arma.registrarUso()
+	    }
+	    else {
+	    	self.error("El arma *debe* estar cargada")
 	    }
 	}
 }
@@ -55,14 +59,16 @@ object floki {
 //poder evaluar esta segunda condición.
 object mario {
 	var valorRecolectado = 0
-	var property esFeliz
+	var ultimoElementoQueEncontro 
 	
 	method encontrar(elemento) {
 	    valorRecolectado += elemento.valorQueOtorga()
 	    elemento.recibirTrabajo()
-	    esFeliz = valorRecolectado >= 50 || elemento.altura() >= 10
+	    ultimoElementoQueEncontro = elemento
 	}
-}
+	method esFeliz() {
+		return valorRecolectado >= 50 || ultimoElementoQueEncontro.altura() >= 10
+	}
 
 object noHayPersonaje {
 	// no hace falta ponerle ningún método, es solamente para marcarle a Luisa que no tiene ningún personaje activo
